@@ -1,7 +1,7 @@
-const Button = ({ increaseCount }) => {
+const Button = ({ changeCount, name, style, disabled }) => {
     return (
         <div>
-            <button onClick={increaseCount}>Add 1!</button>
+            <button onClick={changeCount} style={style} disabled = {disabled}>{name}</button>
         </div>
     );
 };
