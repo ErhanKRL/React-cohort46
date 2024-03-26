@@ -16,6 +16,7 @@ function App() {
             path="/"
             element={
               <div>
+                <h1>Products</h1>
                 <CategoriesController setActiveCategory={setActiveCategory} activeCategory={activeCategory} />
                 <ProductsController activeCategory={activeCategory} />
               </div>
