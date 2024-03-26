@@ -32,4 +32,4 @@ function App() {
 export default App;
 
 
-//https://main--ecommercehyf.netlify.app/
+//https://ecommercehyf.netlify.app/

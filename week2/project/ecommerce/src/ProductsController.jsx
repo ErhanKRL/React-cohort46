@@ -9,31 +9,30 @@ export const ProductsController = ({ activeCategory }) => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
   
-    const fetchProducts = async () => {
-        const url = activeCategory ? `https://fakestoreapi.com/products/category/${activeCategory}` : 'https://fakestoreapi.com/products';
-      try {
-        const response = await fetch(url);
-        if (!response.ok) {
-          throw new Error();
-        }
-        const data = await response.json();
-        setProducts(data);
-        setLoading(false);
-      } catch (error) {
-        setError(true);
-        setLoading(false);
-      }
-    };
-  
     useEffect(() => {
-      fetchProducts();
+        const fetchProducts = async () => {
+            const url = activeCategory ? `https://fakestoreapi.com/products/category/${activeCategory}` : 'https://fakestoreapi.com/products';
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error();
+                }
+                const data = await response.json();
+                setProducts(data);
+                setLoading(false);
+            } catch (error) {
+                setError(true);
+                setLoading(false);
+            }
+        };
+
+        fetchProducts();
     }, [activeCategory]);
-    console.log('rendering ProductsController');
     return (
-      <div>
-        {loading && <Loading />}
-        {error && <Error />}
-        {!loading && !error && <ProductsList products={products}/>}
-      </div>
+        <div>
+            {loading && <Loading />}
+            {error && <Error />}
+            {!loading && !error && <ProductsList products={products}/>}
+        </div>
     );
-  };
+};
