@@ -15,7 +15,7 @@ export const CategoriesController = ({ setActiveCategory, activeCategory }) => {
     try {
       const response = await fetch('https://fakestoreapi.com/products/categories');
       if (!response.ok) {
-        throw new Error('Failed to fetch categories');
+        throw new Error();
       }
       const data = await response.json();
       setCategories(data);
