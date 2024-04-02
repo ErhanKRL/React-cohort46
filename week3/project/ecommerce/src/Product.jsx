@@ -4,8 +4,7 @@ import heartRegular from './assets/heart-regular.svg';
 import heartSolid from './assets/heart-solid.svg';
 
 export const Product = ({ product }) => {
-  const { favorites, addToFavorites, removeFromFavorites, isFavorite } = useFavourites();
-  console.log(favorites);
+  const { addToFavorites, removeFromFavorites, isFavorite } = useFavourites();
   const toggleFavorite = (event, productId) => {
     event.preventDefault(); 
     event.stopPropagation();

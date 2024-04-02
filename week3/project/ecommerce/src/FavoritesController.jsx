@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 export const FavoritesController= () => {
   const { favorites } = useFavourites();
   const [favoriteProducts, setFavoriteProducts] = useState([]);
-    console.log(favorites);
   useEffect(() => {
     const fetchFavoriteProducts = async () => {
       const fetchedProducts = await Promise.all(
