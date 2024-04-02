@@ -1,4 +1,3 @@
-// ProductDetail.jsx
 import { useFavourites } from './FavoritesContext';
 import heartRegular from './assets/heart-regular.svg';
 import heartSolid from './assets/heart-solid.svg';

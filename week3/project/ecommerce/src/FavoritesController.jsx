@@ -1,4 +1,3 @@
-// FavoritesPage.jsx
 import React, { useState, useEffect } from 'react';
 import { useFavourites } from './FavoritesContext';
 import { ProductsList } from './ProductsList';
